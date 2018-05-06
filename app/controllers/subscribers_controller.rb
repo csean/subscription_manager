@@ -2,7 +2,7 @@ class SubscribersController < ApplicationController
 
   # GET /subscribers.json
   def index
-    @subscribers = Subscriber.order(:name).page(params[:page])
+    @subscribers = Subscriber.includes(subscriptions: :item).order(:name).page(params[:page])
   end
 
   # GET /subscribers/1.json
