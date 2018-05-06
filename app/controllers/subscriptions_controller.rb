@@ -1,19 +1,15 @@
 class SubscriptionsController < ApplicationController
-
   # GET /subscriptions
-  # GET /subscriptions.json
   def index
     @subscriptions = Subscription.includes(:subscriber, :item).order(:created_at).page(params[:page])
   end
 
   # GET /subscriptions/1
-  # GET /subscriptions/1.json
   def show
     @subscription = Subscription.find(params[:id])
   end
 
   # POST /subscriptions
-  # POST /subscriptions.json
   def create
     @subscription = Subscription.new(subscription_params)
     response = BillingGatewayService.instance.process(@subscription)

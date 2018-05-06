@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe SubscribersController, type: :controller do
-
   describe 'GET #index' do
     it 'returns a success response' do
       get :index, format: :json
