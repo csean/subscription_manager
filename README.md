@@ -11,7 +11,7 @@ It also can list out a paginated response of subscriptions and subscribers.
 
 I used the example from here: https://gist.github.com/freezepl/2a75c29c881982645156f5ccf8d1b139
 
-The credentials file needs to have an entry with the same keys as the credentials.yml.sample file. Before running the application, please `EDITOR=vi --watch bundle exec rake credentials:edit` and copy the format from credentials.yml.sample but replace with username and password
+The credentials file needs to have an entry with the same keys as the credentials.yml.sample file. Before running the application, please `EDITOR=vi bundle exec rake credentials:edit` and copy the format from credentials.yml.sample but replace with username and password
 
 ### Ruby Version
 
